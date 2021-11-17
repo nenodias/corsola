@@ -43,6 +43,9 @@ public class PokemonRunner implements CommandLineRunner {
                 .doOnComplete(() -> {
                     log.info("I=FINISHED");
                     shutdownManager.initiateShutdown(0);
+                }).doOnError((e) -> {
+                    log.error("E=ERROR, error{}", e);
+                    shutdownManager.initiateShutdown(-1);
                 }).subscribe();
     }
 
