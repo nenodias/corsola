@@ -14,13 +14,13 @@ public class PokemonGenerations {
         return Flux.create((FluxSink<Integer> fluxSink) -> {
             IntStream.range(1, 151)
                     .forEach(fluxSink::next);
-        });
+        }).take(150);
     }
 
     public Flux<Integer> generateJohto() {
         return Flux.create((FluxSink<Integer> fluxSink) -> {
             IntStream.range(151, 251)
                     .forEach(fluxSink::next);
-        });
+        }).take(100);
     }
 }

@@ -28,7 +28,7 @@ public class ExampleRunner implements CommandLineRunner {
     }
 
     private void consumeMany(){
-        pokemonGenerations.generateKanto().take(150)
+        pokemonGenerations.generateKanto()
                 .as(pokemonService::fetchPokemon)
                 .collectList()
                 .block()
