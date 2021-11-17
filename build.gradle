@@ -6,7 +6,7 @@ plugins {
 }
 
 generateJava{
-	packageName = 'io.github.nenodias.corsola.generated'
+	packageName = 'io.github.nenodias.corsola.domain.pokemon.generated'
 	generateClient = true
 }
 

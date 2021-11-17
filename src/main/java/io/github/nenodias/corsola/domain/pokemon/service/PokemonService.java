@@ -1,6 +1,6 @@
-package io.github.nenodias.corsola.domain;
+package io.github.nenodias.corsola.domain.pokemon.service;
 
-import io.github.nenodias.corsola.generated.types.Pokemon;
+import io.github.nenodias.corsola.domain.pokemon.generated.types.Pokemon;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

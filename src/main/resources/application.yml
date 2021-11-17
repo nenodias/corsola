@@ -1,0 +1,23 @@
+spring:
+  main:
+    web-application-type: none
+  cloud:
+    stream:
+      function:
+        definition: importPokemon
+      default-binder: kafka
+      bindings:
+        importPokemon-out-0:
+          destination: "cmd.import-pokemon"
+          binder: kafka
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true
+
+dgs:
+  reload: true
+
+pokemon:
+  graphql:
+    url: http://pokeapi-graphiql.herokuapp.com

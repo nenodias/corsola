@@ -1,4 +1,4 @@
-package io.github.nenodias.corsola.utils;
+package io.github.nenodias.corsola.domain.pokemon.utils;
 
 import org.springframework.stereotype.Component;
 
@@ -14,13 +14,13 @@ public class PokemonGenerations {
         return Flux.create((FluxSink<Integer> fluxSink) -> {
             IntStream.range(1, 151)
                     .forEach(fluxSink::next);
-        }).take(150);
+        });
     }
 
     public Flux<Integer> generateJohto() {
         return Flux.create((FluxSink<Integer> fluxSink) -> {
             IntStream.range(151, 251)
                     .forEach(fluxSink::next);
-        }).take(100);
+        });
     }
 }

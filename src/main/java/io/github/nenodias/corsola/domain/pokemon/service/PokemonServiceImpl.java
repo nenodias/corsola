@@ -1,4 +1,4 @@
-package io.github.nenodias.corsola.domain;
+package io.github.nenodias.corsola.domain.pokemon.service;
 
 import com.netflix.graphql.dgs.client.GraphQLResponse;
 import com.netflix.graphql.dgs.client.WebClientGraphQLClient;
@@ -7,9 +7,9 @@ import com.netflix.graphql.dgs.client.codegen.GraphQLQueryRequest;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Service;
 
-import io.github.nenodias.corsola.generated.client.PokemonGraphQLQuery;
-import io.github.nenodias.corsola.generated.client.PokemonProjectionRoot;
-import io.github.nenodias.corsola.generated.types.Pokemon;
+import io.github.nenodias.corsola.domain.pokemon.generated.client.PokemonGraphQLQuery;
+import io.github.nenodias.corsola.domain.pokemon.generated.client.PokemonProjectionRoot;
+import io.github.nenodias.corsola.domain.pokemon.generated.types.Pokemon;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
